@@ -1,0 +1,608 @@
+/* =========================================================
+   Lisa Rai Portfolio — shared stylesheet
+   Used by: index.html, projects.html, stem.html, art.html, about.html
+   ========================================================= */
+
+:root {
+  --purple: #9B7FE8;
+  --purple-deep: #241C42;
+  --purple-soft: rgba(155, 127, 232, 0.12);
+  --orange: #EFA868;
+  --orange-deep: #C9782E;
+  --orange-soft: rgba(239, 168, 104, 0.16);
+  --navy-text: #44557C;
+  --border-grey: #E9E7F0;
+  --bg: #FFFFFF;
+
+  --font-heading: 'Baloo 2', 'Trebuchet MS', sans-serif;
+  --font-body: 'Inter', 'Segoe UI', sans-serif;
+
+  --max-width: 1120px;
+  --radius-lg: 24px;
+  --radius-md: 18px;
+  --radius-sm: 12px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--navy-text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 60px;
+}
+
+/* ---------- Navbar ---------- */
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 26px 60px;
+  border-bottom: 1px solid var(--border-grey);
+}
+
+.logo {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.05rem;
+  letter-spacing: 1px;
+  color: var(--purple);
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 14px;
+}
+
+.nav-pill {
+  padding: 10px 24px;
+  border-radius: 999px;
+  border: 1.5px solid var(--purple);
+  color: var(--purple);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.92rem;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.nav-pill:hover {
+  background: var(--purple-soft);
+}
+
+.nav-pill.active {
+  background: var(--purple);
+  color: #fff;
+}
+
+.nav-pill.active:hover {
+  background: var(--purple);
+}
+
+/* ---------- Generic page header blocks ---------- */
+
+.breadcrumb {
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+  font-size: 0.78rem;
+  color: var(--purple);
+  margin-top: 46px;
+  margin-bottom: 14px;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+  font-size: 0.78rem;
+  color: var(--purple);
+  margin-top: 46px;
+  margin-bottom: 14px;
+}
+
+.heading-xl {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  color: var(--purple);
+  font-size: 2.75rem;
+  line-height: 1.18;
+  margin: 0 0 20px;
+  max-width: 780px;
+}
+
+.subtext {
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: var(--navy-text);
+  max-width: 640px;
+  margin: 0 0 50px;
+}
+
+.section-heading {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 1.65rem;
+  color: var(--purple-deep);
+  margin: 56px 0 26px;
+}
+
+
+/* ---------- Card grids (used on stem.html) ---------- */
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 26px;
+}
+
+.proj-card {
+  border: 2px solid var(--purple);
+  border-radius: var(--radius-md);
+  padding: 30px;
+}
+
+.proj-card.orange {
+  border-color: var(--orange);
+}
+
+.proj-card .label {
+  color: var(--purple);
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.proj-card.orange .label {
+  color: var(--orange-deep);
+}
+
+.proj-card h3 {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  color: var(--purple-deep);
+  font-size: 1.35rem;
+  margin: 0 0 14px;
+}
+
+.proj-card p {
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ---------- Projects overview rows (projects.html) ---------- */
+
+.project-row {
+  display: flex;
+  align-items: center;
+  gap: 56px;
+  margin-bottom: 74px;
+}
+
+.project-row.reverse {
+  flex-direction: row-reverse;
+}
+
+.project-row .media {
+  width: 50%;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.project-row .media img {
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+}
+
+.project-row .text {
+  width: 50%;
+}
+
+.project-row .text .eyebrow {
+  margin-top: 0;
+}
+
+.project-row .text h2 {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  color: var(--purple-deep);
+  font-size: 1.5rem;
+  letter-spacing: 0.5px;
+  margin: 0 0 16px;
+}
+
+.project-row .text p {
+  line-height: 1.65;
+  margin: 0;
+  max-width: 480px;
+}
+
+/* ---------- Art grid (art.html) ---------- */
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.art-card {
+  border: 2px solid var(--purple);
+  border-radius: var(--radius-md);
+  padding: 16px;
+}
+
+.art-card.orange {
+  border-color: var(--orange);
+}
+
+.art-card .thumb {
+  height: 150px;
+  border-radius: var(--radius-sm);
+  margin-bottom: 18px;
+  background-size: cover;
+  background-position: center;
+}
+
+.thumb.fill-orange {
+  background-color: var(--orange);
+}
+
+.thumb.fill-purple {
+  background-color: var(--purple);
+}
+
+.art-card h4 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--purple-deep);
+  font-size: 1.05rem;
+  margin: 0 0 8px;
+}
+
+.art-card p {
+  font-size: 0.92rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.coverart-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+  margin-top: 24px;
+}
+
+.coverart-item .thumb {
+  height: 260px;
+  border-radius: var(--radius-lg);
+  margin-bottom: 14px;
+  background-size: cover;
+  background-position: center;
+}
+
+.coverart-item .caption {
+  font-size: 0.92rem;
+  color: var(--navy-text);
+}
+
+.sonata-row {
+  display: flex;
+  gap: 56px;
+  align-items: flex-start;
+  margin-top: 24px;
+}
+
+.sonata-row .text {
+  width: 46%;
+}
+
+.sonata-row .text p {
+  line-height: 1.65;
+}
+
+.sonata-row .thumb {
+  width: 54%;
+  height: 260px;
+  border-radius: var(--radius-lg);
+  background-color: var(--orange);
+  background-size: cover;
+  background-position: center;
+}
+
+/* ---------- About page ---------- */
+
+.about-photo {
+  width: 360px;
+  height: 590px;
+  border-radius: var(--radius-lg);
+  object-fit: cover;
+  background-color: var(--purple-soft);
+  margin-bottom: 40px;
+}
+
+.about-bio {
+  max-width: 460px;
+  line-height: 1.7;
+  font-size: 1.02rem;
+  margin-bottom: 60px;
+}
+
+/* ---------- Home page ---------- */
+
+.top-divider {
+  height: 4px;
+  border-radius: 3px;
+  background: var(--purple);
+  width: 100%;
+  margin: 44px 0 46px;
+}
+
+.hero-home {
+  display: flex;
+  gap: 46px;
+  align-items: flex-start;
+  margin-bottom: 60px;
+}
+
+.logo-mark {
+  flex-shrink: 0;
+  width: 200px;
+  height: 200px;
+  border-radius: var(--radius-lg);
+  background: var(--orange);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-mark .circle {
+  width: 118px;
+  height: 118px;
+  border-radius: 50%;
+  background: var(--purple);
+  border: 4px solid #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 1.9rem;
+  color: #fff;
+  box-shadow: 0 0 0 1px var(--purple);
+  overflow: hidden;
+}
+
+.logo-mark .circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-home .quote {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  color: var(--purple);
+  font-size: 2rem;
+  line-height: 1.32;
+  margin: 0 0 22px;
+}
+
+.hero-home .quote .author {
+  display: block;
+  margin-top: 10px;
+}
+
+.hero-home .intro {
+  max-width: 560px;
+  line-height: 1.65;
+  margin: 0;
+}
+
+.highlight-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 26px;
+}
+
+.highlight-card {
+  border: 2px solid var(--purple);
+  border-radius: var(--radius-md);
+  padding: 22px;
+}
+
+.highlight-card.orange {
+  border-color: var(--orange);
+}
+
+.card-banner {
+  height: 66px;
+  border-radius: var(--radius-sm);
+  background: var(--purple);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 22px;
+}
+
+.card-banner.orange {
+  background: var(--orange);
+}
+
+.highlight-card h3 {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  color: var(--purple);
+  font-size: 1.15rem;
+  margin: 0 0 12px;
+}
+
+.highlight-card.orange h3 {
+  color: var(--orange-deep);
+}
+
+.highlight-card p {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  margin: 0;
+  color: var(--navy-text);
+}
+
+/* ---------- Footer CTA (every page) ---------- */
+
+.footer-cta {
+  background: var(--purple);
+  border-radius: 28px;
+  margin: 70px 60px 60px;
+  padding: 42px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  color: #fff;
+}
+
+.footer-cta h3 {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 1.55rem;
+  margin: 0 0 8px;
+}
+
+.footer-cta p {
+  margin: 0;
+  opacity: 0.92;
+  font-size: 0.95rem;
+}
+
+.footer-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-shrink: 0;
+}
+
+.email-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #fff;
+  color: var(--purple-deep);
+  padding: 12px 22px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.icon-circle {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.icon-circle.linkedin {
+  background: #6D5CA6;
+}
+
+.icon-circle.instagram {
+  background: #E8935A;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 860px) {
+  .navbar {
+    padding: 20px 24px;
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+
+  .container {
+    padding: 0 24px;
+  }
+
+  .heading-xl {
+    font-size: 2rem;
+  }
+
+  .grid-2,
+  .grid-3,
+  .coverart-grid,
+  .highlight-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-row,
+  .project-row.reverse,
+  .sonata-row {
+    flex-direction: column;
+  }
+
+  .project-row .media,
+  .project-row .text,
+  .sonata-row .text,
+  .sonata-row .thumb {
+    width: 100%;
+  }
+
+  .about-photo {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 5;
+  }
+
+  .hero-home {
+    flex-direction: column;
+  }
+
+  .footer-cta {
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 50px 20px 40px;
+  }
+}
+/* Sonata on Art*/
+.sonata-row .media {
+  width: 54%;
+  margin-left: auto;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.sonata-row .media img {
+  width: 100%;
+  border-radius: var(--radius-lg);
+}
